@@ -1,0 +1,136 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/** Header Mobile**/
+
+img{
+    width:100%;
+    height:100%;
+}
+
+header{
+    
+    height: 250px;
+    min-width: 350px;
+}
+
+
+.noticiaPortada{
+    display: flex;
+    height: 60%;
+    margin-left: 15px;
+    width: 90%;
+}
+.imagenEncabezado{
+    margin-top: 18px;
+    margin-left: 17px;
+    height: 80%;
+    width: 60%;
+}
+
+
+.textoEncabezado{
+    margin-top: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 80%;
+    width: 50%;
+
+}
+
+.titular{
+    font-size: 12px;
+}
+.resumenTitular{
+    font-size: 10px;
+}
+.horaTitular{
+    font-size: 9px; 
+     margin-top: 26px;
+}
+
+.hora{ font-size: 9px;}
+.resumen{font-size: 9px;}
+
+.cuestiones{
+    display:flex;
+    height:20%;
+    width:80%;
+    margin-left: 4px;
+    font-size: 9px;
+    font-weight: bold;
+    list-style:disc;
+    }
+
+/*Main Mobile: noticias destacadas (en columna en móvil)*/
+main{
+    background-color: azure;
+    height: 800px;
+    min-width: 350px;
+    margin-top: -30px;
+
+}
+.destacadas{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.noticia h3{
+    font-size: 10px;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.importante{
+    display:flex;
+    flex-direction: row;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top:10px;
+
+}
+
+.noticiaTexto{
+    display: flex;
+    flex-direction: column;
+}
+
+.destacadas img{
+    width:40%;
+    height:90%;
+}
+
+.destacadas .hora{
+    margin-left: 10px;
+    margin-top: 42px;
+}
+
+/*Noticias secundarias: que se ven en fila en el movil*/
+
+.secundarias{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.secundaria{
+    display:flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+/*En modo movil los resúmenes no se ven de las noticias destacadas*/
+
+@media only screen and (max-width:400px) {
+    .destacadas .resumen{
+      display: none;
+    }
+    .storie{
+        display: none;
+    }
+  }
+
+
+
