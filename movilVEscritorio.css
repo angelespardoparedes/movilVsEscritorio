@@ -12,6 +12,7 @@ header{
     
     height: 250px;
     min-width: 350px;
+    max-width: 550px;
 }
 
 
@@ -52,53 +53,54 @@ header{
 .hora{ font-size: 9px;}
 .resumen{font-size: 9px;}
 
-.cuestiones{
-    display:flex;
+.cuestionesInside{
     height:20%;
     width:80%;
-    margin-left: 4px;
+    margin-left: -29px;
     font-size: 9px;
     font-weight: bold;
     list-style:disc;
     }
+.cuestionInside{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
 /*Main Mobile: noticias destacadas (en columna en móvil)*/
 main{
-    background-color: azure;
     height: 800px;
     min-width: 350px;
     margin-top: -30px;
 
 }
+
 .destacadas{
     display:flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
-}
-.noticia h3{
-    font-size: 10px;
-    width: 100%;
-    margin-left: 10px;
 }
 
 .importante{
     display:flex;
-    flex-direction: row;
-    margin-left: 10px;
-    margin-right: 20px;
-    margin-top:10px;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.destacadas img{
+    width:100%;
+    height:90%;
 
 }
+
+.noticia h3{
+    font-size: 10px;
+    width: 100%;
+}
+
+
 
 .noticiaTexto{
     display: flex;
     flex-direction: column;
-}
-
-.destacadas img{
-    width:40%;
-    height:90%;
 }
 
 .destacadas .hora{
@@ -121,16 +123,114 @@ main{
     margin-right: 10px;
 }
 
+/*Features&Analysis, se ven en fila*/
+
+.features{
+    display: flex;
+    margin-right: 10px;
+
+}
+
+.feature{
+    display:flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.feature img{
+    width:100%;
+    height:90%;
+}
+
+
+
+.features h2{
+    font-size: 15px;
+}
+
+
 /*En modo movil los resúmenes no se ven de las noticias destacadas*/
 
 @media only screen and (max-width:400px) {
+    .cuestiones{
+        display:flex;
+        height:20%;
+        width:80%;
+        margin-left: 4px;
+        font-size: 9px;
+        font-weight: bold;
+        list-style:disc;
+        }
+
+    .cuestionesInside{
+        display: none;
+    }
+
+
+    .destacadas{
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .destacadas img{
+        width:50%;
+        height:90%;
+    
+    }
     .destacadas .resumen{
       display: none;
+    }
+    .importante{
+        display:flex;
+        flex-direction: row;
+        margin-left: 10px;
+        margin-right: 20px;
+        margin-top:10px;
+    
     }
     .storie{
         display: none;
     }
+    .storieSinImagen{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 10%;
+        border-top-width: 1px;
+        border-top-color: gray;
+        border-top-style: solid;
+        margin-top: 5%;
+        justify-content: space-evenly;
+    }
+
+
+    .storieMovil h3{
+        width: 100%;
+        font-size: 11px;
+        font-weight: bold;
+
+    }
+
+    .featuresDesktop{
+        display:none;
+    }
+
+
   }
+
+@media only screen and (min-width:400px){
+    .storieMovil{
+     display:none; 
+    }
+    .cuestiones{
+        display:none;
+    }
+    .horaTitular{
+        margin-top: 50px;
+    }
+}
 
 
 
